@@ -1,4 +1,4 @@
-//Queue Operations
+//QUEUE OPERATIONS
 
 #include<stdio.h>
 #include<stdlib.h>
