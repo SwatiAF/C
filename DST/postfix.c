@@ -15,3 +15,4 @@ int pop()
 {
     return stack[top--];
 }
+
