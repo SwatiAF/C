@@ -3,46 +3,46 @@
 #include<stdio.h>
 #include<stdlib.h>
 #define MAX 50
-int q_arr[MAX];
+int queue_arr[MAX];
 int rear=-1, front=-1;
 
 void insert()  {
-    int add;
-    if(rear==MAX-1)
-    printf("Q overflow");
+    int add_item;
+    if(rear == MAX - 1)
+    printf("QUEUE OVERFLOW");
     else
     {
-        if(front==-1)
-        front=0;
+        if(front == -1)
+        front = 0;
         printf("Insert Elements: \n");
-        scanf("%d", &add);
+        scanf("%d", &add_item);
         rear++;
-        q_arr[rear] = add;
+        queue_arr[rear] = add_item;
     }
 }
 
 void delete()  {
-    if(front==-1 || front>rear)
+    if(front == -1 || front > rear)
     {
-        printf("Q underflow");
+        printf("QUEUE UNDERFLOW");
         return;
     }
     else
     {
-        printf("deleted element: %d \n", q_arr[front]);
+        printf("Deleted element: %d \n", queue_arr[front]);
         front++;
     }
 }
 
 void display()  {
     int i;
-    if(front==-1)
-    printf("Q empty");
+    if(front == -1)
+    printf("QUEUE EMPTY");
     else
     {
         printf("Queue is: \n");
-        for(i=front; i<=rear; i++)
-        printf("%d \n", q_arr[i]);
+        for(i = front; i <= rear; i++)
+        printf("%d \n", queue_arr[i]);
     }
 }
 
